@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+<style>
+    .log-td {
+        margin: 10px;
+    }
+
+    input.btn.btn-default.btn-td {
+        float: right;
+    }
+
+    .center {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <p></p>
+    <div class="container body-content center">
+        <form action="/Login/Validate" method="post">
+            <table>
+                <tr>
+                    <td><label class="col-md-2 control-label">Username: </label></td>
+                    <td><input type="text" class="log-td form-control" name="username" /></td>
+                </tr>
+                <tr>
+                    <td><label class="col-md-2 control-label">Password: </label></td>
+                    <td><input type="password" class="log-td form-control" name="password" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Login" class="btn btn-default btn-td" /></td>
+                </tr>
+            </table>
+        </form>
+        <div>
+            <p>@Html.ActionLink("Register as a new user", "Register", "Login")</p>
+        </div>
+    </div>
+</body>
