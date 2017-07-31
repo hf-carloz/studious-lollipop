@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Gantt.Models.GC_User
+
+@{
     ViewBag.Title = "Register";
 }
 
@@ -9,11 +11,12 @@
     @Html.AntiForgeryToken()
     <div class="form-horizontal">
         <hr />
-        @Html.ValidationSummary("", new { @class = "text-danger" })
+       @* @Html.ValidationSummary("", new { @class = "text-danger" })*@
         <div class="form-group">
             @Html.Label("Username", new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
                 <input type="text" class="form-control" name="username" placeholder="Username" />
+                @Html.ValidationMessageFor(model => model.username, new { @class = "text-danger"})
             </div>
         </div>
         <div class="form-group">
