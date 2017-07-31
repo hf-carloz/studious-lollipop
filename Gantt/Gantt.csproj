@@ -473,7 +473,9 @@
     <Content Include="Views\Login\Register.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Content\App_LocalResources\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
