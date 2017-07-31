@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Gantt.Models;
 
 namespace Gantt.Controllers
 {
     public class LoginController : Controller
     {
+        private Gantt_dbEntities db = new Gantt_dbEntities();
+
         // GET: Login
         public ActionResult Index()
         {
@@ -19,6 +22,19 @@ namespace Gantt.Controllers
         {
             Session["LoggedIn"] = 2;
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Register([Bind(Include = "username,password,email,firstname,lastname,gender,bday")] GC_User user)
+        {
+            if (ModelState.IsValid)
+            {
+                db.GC_User.Add(user);
+                db.SaveChanges();
+
+                return RedirectToAction("/Index");
+            }
+            return View("/Shared/Error");
         }
 
         [HttpPost]
