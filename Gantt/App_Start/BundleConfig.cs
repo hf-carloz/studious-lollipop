@@ -22,13 +22,19 @@ namespace Gantt
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/bootstrap-datepicker.js", // For DatePicker
-                      "~/Scripts/dhtmlxgantt.js", // For Gantt
                       "~/Scripts/respond.js")); 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/bootstrap-datepicker.css", // For DatePicker
-                      "~/Content/dhtmlxgantt_skyblue.css",  // For Gantt
-                      "~/Content/site.css")); 
+                      "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/gantt").Include(
+                      "~/Scripts/dhtmlxgantt.js"// For Gantt
+                        ));
+
+            bundles.Add(new StyleBundle("~/Content/gantt").Include(
+                         "~/Content/dhtmlxgantt_skyblue.css" // For Gantt
+                        ));
         }
     }
 }
