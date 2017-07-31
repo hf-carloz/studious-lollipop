@@ -33,7 +33,7 @@ namespace Gantt
                         ));
 
             bundles.Add(new StyleBundle("~/Content/gantt").Include(
-                         "~/Content/dhtmlxgantt_skyblue.css" // For Gantt
+                         "~/Content/dhtmlxgantt/dhtmlxgantt_skyblue.css" // For Gantt
                         ));
         }
     }
