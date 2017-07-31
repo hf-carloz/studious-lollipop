@@ -31,10 +31,9 @@ namespace Gantt.Controllers
             {
                 db.GC_User.Add(user);
                 db.SaveChanges();
-
                 return RedirectToAction("/Index");
             }
-            return View("/Shared/Error");
+            return View();
         }
 
         [HttpPost]
@@ -43,18 +42,17 @@ namespace Gantt.Controllers
             string user = Request.Form["username"];
             string pass = Request.Form["password"];
 
-            if ((user == "admin") && (pass == "admin"))
+            foreach(var acct in db.GC_User)
             {
-                Session["LoggedIn"] = 1;
-                Session["Username"] = user;
+                if((user == acct.username) && (pass == acct.password))
+                {
+                    Session["LoggedIn"] = 1;
+                    Session["Username"] = user;
 
-                return Redirect("/Dashboard/Index");
+                    return Redirect("/Dashboard/Index");
+                }
             }
-            else
-            {
-                return Redirect("/Login/Index");
-            }
-
+            return Redirect("/Login/Index");
         }
 
         public ActionResult Logout()
