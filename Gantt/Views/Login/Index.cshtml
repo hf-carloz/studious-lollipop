@@ -17,25 +17,51 @@
     }
 </style>
 
+<h3>Login</h3>
 
-    <p></p>
-    <div class="container body-content center">
-        <form action="/Login/Validate" method="post">
-            <table>
-                <tr>
-                    <td><label class="col-md-2 control-label">Username: </label></td>
-                    <td><input type="text" class="log-td form-control" name="username" /></td>
-                </tr>
-                <tr>
-                    <td><label class="col-md-2 control-label">Password: </label></td>
-                    <td><input type="password" class="log-td form-control" name="password" /></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input type="submit" value="Login" class="btn btn-default btn-td" /></td>
-                </tr>
-            </table>
-        </form>
-        <div>
-            <p>@Html.ActionLink("Register as a new user", "Register", "Login")</p>
+@using (Html.BeginForm("Validate", "Login"))
+{
+    <div class="form-horizontal">
+        <hr />
+        <div class="form-group">
+            @Html.Label("Username: ", new { @class = "col-md-2 control-label"})
+            <div class="col-md-10">
+                <input type="text" class="form-control" name="username" placeholder="Username" />
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Password: ", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                <input type="password" class="form-control" name="password" placeholder="Password" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10" style="padding-left: 20%;">
+                <input type="submit" class="btn btn-default" value="Login" />
+            </div>
         </div>
     </div>
+}
+<div>
+    <p>@Html.ActionLink("Register as a new user", "Register", "Login")</p>
+</div>
+@*<div class="container body-content center">
+    <form action="/Login/Validate" method="post">
+        <table>
+            <tr>
+                <td><label class="col-md-2 control-label">Username: </label></td>
+                <td><input type="text" class="log-td form-control" name="username" /></td>
+            </tr>
+            <tr>
+                <td><label class="col-md-2 control-label">Password: </label></td>
+                <td><input type="password" class="log-td form-control" name="password" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Login" class="btn btn-default btn-td" /></td>
+            </tr>
+        </table>
+    </form>
+    <div>
+        <p>@Html.ActionLink("Register as a new user", "Register", "Login")</p>
+    </div>
+</div>*@

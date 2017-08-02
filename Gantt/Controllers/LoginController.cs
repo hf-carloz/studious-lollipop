@@ -42,8 +42,17 @@ namespace Gantt.Controllers
             string user = Request.Form["username"];
             string pass = Request.Form["password"];
 
-            foreach(var acct in db.GC_User)
+            Console.WriteLine("FORM USER: " + user);
+            Console.WriteLine("FORM PASS: " + pass);
+
+            foreach (var acct in db.GC_User)
             {
+                Console.WriteLine("FORM USER: " + user);
+                Console.WriteLine("FORM PASS: " + pass);
+
+                Console.WriteLine("ACCT VAR");
+                Console.WriteLine("username: " + acct.username);
+                Console.WriteLine("password: " + acct.password);
                 if((user == acct.username) && (pass == acct.password))
                 {
                     Session["LoggedIn"] = 1;
