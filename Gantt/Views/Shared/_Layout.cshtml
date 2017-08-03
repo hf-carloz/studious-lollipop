@@ -3,32 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Title Here</title>
+    <title>Gantt Chart - @ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    	<style type="text/css">
-		html, body{ height:100%; padding:0px; margin:0px; }
-		.weekend{ background: #f4f7f4 !important;}
-		.gantt_selected .weekend{ background:#FFF3A1 !important; }
-		.well {
-			text-align: right;
-		}
-	
-		.container-fluid .row {
-			margin-bottom: 10px;
-		}
-		.container-fluid .gantt_wrapper {
-			height: 700px;
-			width: 100%;
-		}
-		.gantt_container {
-            display:block;
-            height: 300px;
-			border-radius: 4px;
-		}
-		.gantt_grid_scale { background-color: transparent; }
-		.gantt_hor_scroll { margin-bottom: 1px; }
-	</style>
+    <link rel="stylesheet" href="~/custom/style.css" />
 </head>
 
 <body>
@@ -50,7 +28,7 @@
                         <li>@Html.ActionLink("About", "About", "Home")</li>
                         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     </ul>
-                    <ul class="nav navbar-nav" style="float:right;">
+                    <ul class="nav navbar-nav" style="float:right;     margin-right: 15px;">
                         @if(Session["LoggedIn"] == null)
                         {
                             <li>@Html.ActionLink("Register", "Register", "Login")</li>
@@ -63,8 +41,8 @@
                         {
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">@Session["Username"] <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Profile</a></li>
+                                <ul class="dropdown-menu" role="menu" style="margin-right: 30px; min-width:inherit;">
+                                    <li><a href="/Profile/Index">Profile</a></li>
                                     <li><a href="#">Settings</a></li>
                                     <li class="divider"></li>
                                     <li>@Html.ActionLink("Logout", "Logout", "Login")</li>
@@ -77,13 +55,13 @@
         </div>
     </div>
     <div class="container body-content">
-        <div class="row">
+        <div class="row center-block">
             @RenderBody()
         </div>
         <div class="row" style="bottom:0; position:absolute;width:inherit;">
             <hr />
             <footer>
-                <p>&copy; @DateTime.Now.Year - Fujitsu Engineering Technologies Philippines, Inc.</p>
+                <p>&copy; @DateTime.Now.Year - <a href="http://fetp.ph" target="_blank">Fujitsu Engineering Technologies Philippines, Inc.</a></p>
             </footer>
         </div>
     </div>

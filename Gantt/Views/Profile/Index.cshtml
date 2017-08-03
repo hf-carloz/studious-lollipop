@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Profile";
+}
+
+<style>
+    .body-container {
+        margin-top: 75px;
+    }
+</style>
+
+<div class="body-container">
+    <h3>Profile</h3>
+
+    <div class="form-horizontal">
+        <hr />
+        <div class="form-group">
+            @Html.Label("Username: ", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                <input type="text" class="form-control" name="username" placeholder="Username"/>
+            </div>
+        </div>
+    </div>
+</div>
+

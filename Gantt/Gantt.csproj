@@ -155,6 +155,7 @@
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -207,6 +208,7 @@
     <Content Include="Content\dhtmlxgantt\sources\dhtmlxgantt_meadow.css" />
     <Content Include="Content\dhtmlxgantt\sources\dhtmlxgantt_skyblue.css" />
     <Content Include="Content\dhtmlxgantt\sources\dhtmlxgantt_terrace.css" />
+    <Content Include="custom\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -472,6 +474,7 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\Register.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

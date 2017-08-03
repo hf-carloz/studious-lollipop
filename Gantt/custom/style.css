@@ -1,0 +1,69 @@
+﻿/*~Layout Start*/
+html, body {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.weekend {
+    background: #f4f7f4 !important;
+}
+
+.gantt_selected .weekend {
+    background: #FFF3A1 !important;
+}
+
+.well {
+    text-align: right;
+}
+
+.container-fluid .row {
+    margin-bottom: 10px;
+}
+
+.container-fluid .gantt_wrapper {
+    height: 700px;
+    width: 100%;
+}
+
+.gantt_container {
+    display: block;
+    height: 300px;
+    border-radius: 4px;
+}
+
+.gantt_grid_scale {
+    background-color: transparent;
+}
+
+.gantt_hor_scroll {
+    margin-bottom: 1px;
+}
+
+.body-container {
+    margin-top: 75px;
+}
+/*~Layout End*/
+
+/*Register Start*/
+.center {
+    margin: 75px auto auto auto;
+    width: 50%;
+    padding: 10px;
+}
+
+label.col-md-2.control-label {
+    /*min-width: 96px;*/
+    text-align: left;
+}
+/*Register End*/
+
+/*Login Start*/
+.log-td {
+    margin: 10px;
+}
+
+input.btn.btn-default.btn-td {
+    float: right;
+}
+/*Login End*/
