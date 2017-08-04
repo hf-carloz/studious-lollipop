@@ -11,7 +11,14 @@ namespace Gantt.Controllers
         // GET: Profile
         public ActionResult Index()
         {
-            return View();
+            if (Convert.ToInt32(Session["LoggedIn"]) == 1)
+            {
+                return View();
+            }
+            else
+            {
+                return Redirect("/Login/Index");
+            }
         }
     }
 }

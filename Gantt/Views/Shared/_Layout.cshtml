@@ -7,8 +7,18 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link rel="stylesheet" href="~/custom/style.css" />
-</head>
+    
+    <style>
+        .container.body-content {
+            height: 100%;
+        }
 
+        .row.center-block {
+            height: calc(100% - 60px);
+        }
+    </style>
+
+</head>
 <body>
     <div class="row">
         <div class="container">
