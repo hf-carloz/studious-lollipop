@@ -11,6 +11,8 @@ namespace Gantt.Controllers
     {
         private Gantt_dbEntities db = new Gantt_dbEntities();
 
+       #region Login
+
         // GET: Login
         public ActionResult Index()
         {
@@ -70,5 +72,8 @@ namespace Gantt.Controllers
             Session["Username"] = "User";
             return View("Index");
         }
+
+#endregion
+
     }
 }
